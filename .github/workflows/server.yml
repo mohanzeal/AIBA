@@ -58,14 +58,8 @@ jobs:
     - name: Install dependencies
       run: yarn install --immutable
 
-    - name: test all server package
-      run: yarn server test
-
-    - name: build all server dependent packages
-      run: yarn build:global-types
-
-    - name: build all server package
-      run: yarn build:server
+    - name: build all global-types,server & app packages
+      run: yarn build:all
     
     - name: zip build artifacts for server,app
       run: zip -r build_artifacts.zip packages/server/build packages/app/dist/ssr/
