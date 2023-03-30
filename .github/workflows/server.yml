@@ -62,7 +62,7 @@ jobs:
       run: yarn build:all
     
     - name: zip build artifacts for server,app
-      run: zip -r build_artifacts.zip packages/server/build packages/app/dist/ssr/
+      run: zip -r build_artifacts.zip packages/global-types/build packages/server/build packages/app/dist/ssr/
 
     - name: Upload server `build` folder to S3
       run: aws s3 cp build_artifacts.zip s3://aibestapps-backups/prod/ 
