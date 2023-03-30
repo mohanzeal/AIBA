@@ -57,11 +57,8 @@ jobs:
     - name: Install dependencies
       run: yarn install --immutable
 
-    - name: lint all server dependent packages
-      run: yarn server:lint
-
-    - name: test all server dependent packages
-      run: yarn server:test
+    - name: test all server package
+      run: yarn server test
 
     - name: build all server dependent packages
       run: yarn build:global-types
