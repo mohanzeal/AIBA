@@ -56,6 +56,9 @@ jobs:
     - name: Install dependencies
       run: yarn install --immutable
 
+    - name: build all dependant packages for admin
+      run: yarn build:global-types
+
     - name: build all admin dependant packages
       run: yarn build:admin
 
