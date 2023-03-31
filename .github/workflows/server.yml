@@ -64,7 +64,7 @@ jobs:
       run: yarn install --immutable
 
     - name: remove existing build_artifacts
-      run: rm -rf build_artifacts.zip
+      run: rm -rf build_artifacts.zip && echo env
 
     - name: build all global-types,server & app packages
       run: yarn build:all
