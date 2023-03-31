@@ -68,4 +68,4 @@ jobs:
       run: zip -r ${{ github.sha }}.zip packages/global-types/build packages/server/build packages/app/dist/ssr/
 
     - name: Upload server `build` folder to S3
-      run: aws s3 cp build_artifacts.zip s3://aibestapps-backups/prod/
+      run: aws s3 cp ${{ github.sha }}.zip s3://aibestapps-backups/prod/
