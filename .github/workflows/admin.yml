@@ -30,6 +30,12 @@ jobs:
       AWS_ASSETS_BUCKET_REGION: ${{secrets.SERVER_AWS_ASSETS_BUCKET_REGION}}
       AWS_ASSETS_BUCKET: ${{secrets.SERVER_AWS_ASSETS_BUCKET}}
       AWS_ASSETS_DOMAIN: ${{secrets.SERVER_AWS_ASSETS_DOMAIN}}
+      # APP/ADMIN
+      VUE_API_DOMAIN: ${{secrets.APP_VUE_API_DOMAIN}}
+      VUE_APP_PORT: ${{secrets.APP_VUE_APP_PORT}}
+      VUE_DOMAIN_NAME: ${{secrets.APP_VUE_DOMAIN_NAME}}
+      VUE_APP_DOMAIN: ${{secrets.APP_VUE_APP_DOMAIN}}
+      VUE_ASSETS_DOMAIN: ${{secrets.APP_VUE_ASSETS_DOMAIN}}
 
     steps:
     - name: Check out repo master branch
